@@ -12,8 +12,6 @@ defmodule FizzBex do
   def handle_call({:number, number}, {pid, _}, _) do
     :timer.sleep(:rand.uniform(1000))
 
-    string = ""
-
     string =
       if Integer.mod(number, 3) == 0 do
         string <> "Fizz"
